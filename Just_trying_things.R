@@ -164,6 +164,32 @@ if(all_of_them_are_normal){
 }
 
 # Can we do a graph?
+library(ggplot2)
+library(dplyr)
+library(hrbrthemes)
+install.packages("hrbrthemes")
+
+ggplot(DATA,aes(x=DV_SPEED_FPM,fill=`Device Type`,colour=`Device Type`))+
+  geom_density(alpha=0.5)+
+  coord_cartesian(c(1,400))
+?scale_x_continuous
+
+# The sidewalk seems to be the one with more speed
+
+# Speed is not the same as
+
+ggplot(DATA,aes(x=DV_SPEED_FPM,fill=`Device Type`,colour=`Device Type`))+
+  geom_boxplot(alpha=0.05)+
+  coord_cartesian(c(1,400))
+
+
+# Ok, I just did a graph
+# And the passenger elevator is the most powerful one (in terms of speed)
+# Doing the boxplot I have realized the Passenger Elevator is the most powerful one
+# in terms of speed
+
+# How do you make your graphs more readable?
+attributes(datasets::mtcars)$names
 
 # desc.numeric
 # split()
